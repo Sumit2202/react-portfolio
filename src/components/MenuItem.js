@@ -27,12 +27,6 @@ export const MenuItem = ({ item }) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      {/* <a
-        href={item.name === "Dashboard" ? "/" : item.name}
-        className="text-placeholder text-center mb-2 pb-10 border-b-2 font-md dark:text-gray-900 text-black"
-      >
-        {item.name}
-      </a> */}
       <Link
         activeClass="dark:text-white text-black"
         to={item.name}
@@ -41,7 +35,7 @@ export const MenuItem = ({ item }) => {
         offset={-100}
         duration={500}
         className={
-          " text-placeholder text-center mb-2 pb-10 border-b-2 font-md dark:text-gray-900 text-black"
+          "text-placeholder text-center mb-2 pb-10 border-b-2 font-md dark:text-gray-900 text-black"
         }
         aria-current={item.current ? "page" : undefined}
       >
