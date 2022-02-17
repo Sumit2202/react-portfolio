@@ -36,7 +36,7 @@ export const MobileMenu = () => {
       animate={isOpen ? "open" : "closed"}
       ref={containerRef}
     >
-      <motion.div className="background" variants={sidebar} />
+      <motion.div className="background  bg-gray-100" variants={sidebar} />
       <Navigation />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>

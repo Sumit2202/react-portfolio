@@ -1,6 +1,6 @@
 .navigation-container {
     position: absolute;
-    top: 0;
+    top: 7px;
     left: 0;
     bottom: 0;
     width: 150px;
@@ -11,8 +11,9 @@
     top: 0;
     left: 0;
     bottom: 0;
-    width: 270px;
-    background: rgb(235, 230, 230);
+    width: 300px;
+    height: 100vh;
+    /* background: rgb(238, 143, 143); */
   }
   
   .menuToggleBtn {
@@ -36,7 +37,7 @@
   
   ul.navigation {
     padding-top: 0px;
-    padding-left: 25px;
+    padding-left: 60px;
     position: absolute;
     top: 100px;
     width: 230px;
