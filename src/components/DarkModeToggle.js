@@ -1,14 +1,16 @@
+import { motion } from "framer-motion";
+
 const DarkModeToggle = ({ darkMode, setDarkMode }) => {
   return (
-    <button
-      className={`static p-1 dark:bg-gray-300  rounded-md hover:ring-2 ring-gray-500 ${
-        darkMode ? "bg-gray-50" : "bg-gray-200"
-      }`}
+    <motion.button
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.8 }}
+      className={`h-12 static p-1 rounded-md hover:ring-2 ring-gray-500 bg-gray-100`}
       onClick={() => setDarkMode(!darkMode)}
     >
       {darkMode ? (
         <svg
-          className="w-8 pb-1 h-6 align-middle inline-block  hover:text-gray-500 "
+          className="w-12 pb-1 h-8 align-middle inline-block  hover:text-gray-500 "
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -23,7 +25,7 @@ const DarkModeToggle = ({ darkMode, setDarkMode }) => {
         </svg>
       ) : (
         <svg
-          className="w-8 h-6 rounded-md align-middle inline-block hover:text-gray-300 dark:hover:text-gray-300"
+          className="w-12 h-8 rounded-md align-middle inline-block hover:text-gray-300 dark:hover:text-gray-300"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 24 24"
@@ -37,7 +39,7 @@ const DarkModeToggle = ({ darkMode, setDarkMode }) => {
           />
         </svg>
       )}
-    </button>
+    </motion.button>
   );
 };
 

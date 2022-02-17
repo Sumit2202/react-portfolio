@@ -19,7 +19,7 @@ const initialNavigation = [
 
 export const Navigation = () => (
   <motion.ul
-    className="navigation flex flex-col justify-center"
+    className="navigation flex flex-col justify-between"
     variants={variants}
   >
     {initialNavigation.map((i) => (
