@@ -1,28 +1,89 @@
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: -100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      delay: 0.1,
+      when: "beforeChildren",
+    },
+  },
+};
+
+const childVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
 const Dashboard = () => {
   return (
-    <div id="Dashboard">
-      <div className="dark:text-indigo-500 text-indigo-600 text-xl md:text-3xl font-bold">
+    <motion.div
+      id="Dashboard"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div
+        variants={containerVariants}
+        className="dark:text-indigo-500 text-indigo-600 text-xl md:text-3xl font-bold"
+      >
         Hey there! My name&#39;s
-      </div>
-      <div className=" dark:text-white text-black text-5xl md:text-8xl lg:text-9xl font-bold">
+      </motion.div>
+      <motion.div
+        variants={containerVariants}
+        className=" dark:text-white text-black text-5xl md:text-8xl lg:text-9xl font-bold"
+      >
         Sumit Mittal.
-      </div>
-      <div className=" dark:text-white text-black  text-xl md:text-3xl font-medium md:font-bold pt-10">
+      </motion.div>
+      <motion.div
+        variants={childVariants}
+        className=" dark:text-white text-black  text-xl md:text-3xl font-medium md:font-bold pt-10"
+      >
         Software Engineer.{" "}
         <span className="text-gray-500 text-xl md:text-3xl font-medium md:font-bold pt-10 ">
           A Full Stack Developer with an interest in Functional Programming.
         </span>
-      </div>
-      <div className="dark:text-gray-400 text-black  flex flex-row text-md md:text-lg lg:text-2xl font-md md:font-lg lg:font-xl pt-10">
-        <div className="text-center pr-1">🚀</div>
-        <div>
+      </motion.div>
+      <motion.div
+        variants={childVariants}
+        className="dark:text-gray-400 text-black  flex flex-row text-md md:text-lg lg:text-2xl font-md md:font-lg lg:font-xl pt-10"
+      >
+        <motion.div
+          whileHover={{
+            scale: [1, 3, 3, 3, 1],
+            rotate: [0, 0, 270, 360, 360],
+          }}
+        >
+          🚀
+        </motion.div>
+
+        <div className="ml-5">
           Currently exploring new opportunities and working on some side
           projects.
         </div>
-      </div>
-      <div className="pt-10 flex flex-row space-x-3 mb-3">
+      </motion.div>
+      <motion.div
+        variants={childVariants}
+        className="pt-10 flex flex-row space-x-3 mb-3"
+      >
         <a href="https://github.com/Sumit2202">
-          <button
+          <motion.button
+            whileHover={{
+              scale: 1.2,
+              textShadow: "0px 0px 10px rgba(255, 255, 255)",
+              boxShadow: "0px 0px 10px rgba(255, 255, 255)",
+            }}
+            whileTap={{ scale: 0.8 }}
             type="button"
             className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
@@ -32,10 +93,15 @@ const Dashboard = () => {
               src="https://img.icons8.com/ios-filled/50/000000/github.png"
             />
             <span className="ml-2 font-md ">Github</span>
-          </button>
+          </motion.button>
         </a>
         <a href="https://www.linkedin.com/in/sumit-mittal22/">
-          <button
+          <motion.button
+            whileHover={{
+              scale: 1.2,
+              textShadow: "0px 0px 10px rgba(255, 255, 255)",
+            }}
+            whileTap={{ scale: 0.8 }}
             type="button"
             className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
@@ -45,10 +111,15 @@ const Dashboard = () => {
               src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"
             />
             <span className="ml-2 font-md ">LinkedIn</span>
-          </button>
+          </motion.button>
         </a>
         <a href="mailto:sumit22mittal@gmail.com">
-          <button
+          <motion.button
+            whileHover={{
+              scale: 1.2,
+              textShadow: "0px 0px 10px rgba(255, 255, 255)",
+            }}
+            whileTap={{ scale: 0.8 }}
             type="button"
             className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
@@ -58,10 +129,10 @@ const Dashboard = () => {
               src="https://img.icons8.com/ios-filled/50/000000/mail.png"
             />
             <span className="ml-2 font-md">E-mail</span>
-          </button>
+          </motion.button>
         </a>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
