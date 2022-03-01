@@ -18,7 +18,7 @@ const AboutSection = () => {
         </h1>
         <span className="block mb-5  ">
           My primary expertise lies in JavaScript - ES6+, React, TypeScript,
-          Node.js, GraphQL, Postgres, Neo4j(Graph DB), MongoDB, SQL Server,
+          Node.js, GraphQL, Postgres, Neo4j(Graph DB), SQL Server,
           RxJs(Observables).
         </span>
         <span className="block mb-5 ">
@@ -32,8 +32,7 @@ const AboutSection = () => {
           functions a first class citizens!
         </span>
         <span className="block mb-5">
-          I also love music, photography, great outdoors and am a sports
-          enthusiast.
+          I also love sports, biking and I am an outdoor enthusiast.
         </span>
       </div>
       <motion.div
