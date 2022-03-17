@@ -16,32 +16,34 @@ const AboutSection = () => {
           </motion.div>
           About Me
         </h1>
-        <span className="block mb-5  ">
+        <span className="block mb-5 font-semibold ">
           My primary expertise lies in JavaScript - ES6+, React, TypeScript,
           Node.js, GraphQL, Postgres, Neo4j(Graph DB), SQL Server,
           RxJs(Observables).
         </span>
-        <span className="block mb-5 ">
+        <span className="block mb-5 font-semibold">
           Currently I am diving into the Functional paradigm of programming, I
           have been using JavaScript and dabbling around with pure functions,
           monads and shifting to a much more declarative style of functional and
           reactive programming.
         </span>
-        <span className="block mb-5 ">
+        <span className="block mb-5 font-semibold">
           I am a strong advocate of functional programming and believe in making
           functions a first class citizens!
         </span>
-        <span className="block mb-5">
+        <span className="block mb-5 font-semibold">
           I also love sports, biking and I am an outdoor enthusiast.
         </span>
       </div>
       <motion.div
-        className="m-auto w-1/2 lg:w-11/12"
+        className="m-auto pt-0"
         whileHover={{
           scale: 1.1,
         }}
       >
-        <img className="mt-5 rounded-xl" src="./aboutMe.png" alt="aboutMe" />
+        <video className="rounded-lg" preload="auto" muted loop autoPlay>
+          <source src="https://cdnl.iconscout.com/lottie/premium/thumb/man-coding-on-laptop-4337847-3618984.mp4" />
+        </video>
       </motion.div>
     </div>
   );
@@ -59,18 +61,17 @@ const AboutSectionFooter = () => {
             whileHover={{
               scale: 1.2,
               textShadow: "0px 0px 10px rgba(255, 255, 255)",
-              boxShadow: "0px 0px 10px rgba(255, 255, 255)",
             }}
             whileTap={{ scale: 0.8 }}
             type="button"
-            className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="inline-flex justify-around h-12 w-36 items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             <img
               alt="linkedIn-link"
-              className="w-5 h-5"
+              className="w-8 h-8"
               src="https://img.icons8.com/ios-filled/50/000000/linkedin.png"
             />
-            <span className="ml-2 font-md ">LinkedIn</span>
+            <span className="ml-2 font-md text-base sm:text-lg">LinkedIn</span>
           </motion.button>
         </a>
         <a href="mailto:sumit22mittal@gmail.com">
@@ -78,22 +79,21 @@ const AboutSectionFooter = () => {
             whileHover={{
               scale: 1.2,
               textShadow: "0px 0px 10px rgba(255, 255, 255)",
-              boxShadow: "0px 0px 10px rgba(255, 255, 255)",
             }}
             whileTap={{ scale: 0.8 }}
             type="button"
-            className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="inline-flex justify-around h-12 w-32 items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-lg shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           >
             <img
               alt="email-link"
-              className="w-5 h-5"
+              className="w-8 h-8"
               src="https://img.icons8.com/ios-filled/50/000000/mail.png"
             />
-            <span className="ml-2 font-md">E-mail</span>
+            <span className="ml-2 font-md text-base sm:text-lg">E-mail</span>
           </motion.button>
         </a>
       </div>
-      <span className="px-20 text-center m-auto font-semibold md:font-bold block text-md md:text-xl text-black dark:text-white">
+      <span className="px-20 text-center m-auto font-semibold md:font-bold block text-md sm:text-2xl text-black dark:text-white">
         Built with ❤️ using React, Tailwind and Framer Motion
       </span>
     </div>

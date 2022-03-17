@@ -91,20 +91,18 @@ const wordleFeatures = [
 
 const Projects = () => {
   return (
-    <div id="Projects" className="lg:space-x-6 mt-20">
+    <div id="Projects" className="lg:space-x-6 mt-20 xl:mt-28">
       <div className="text-black dark:text-white">
-        <h2 className="font-bold mb-4 text-4xl">
-          <h1 className="flex gap-2 font-bold mb-4 text-4xl">
-            <motion.div
-              whileHover={{
-                scale: [1, 3, 3, 1, 1],
-                rotate: [0, 0, 270, 270, 0],
-              }}
-            >
-              ✏️
-            </motion.div>
-            Projects
-          </h1>
+        <h2 className="flex gap-2 font-bold mb-4 text-4xl">
+          <motion.div
+            whileHover={{
+              scale: [1, 3, 3, 1, 1],
+              rotate: [0, 0, 270, 270, 0],
+            }}
+          >
+            ✏️
+          </motion.div>
+          Projects
         </h2>
         {/* Your Backcountry Fix */}
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:space-x-6 mb-16">
@@ -124,7 +122,7 @@ const Projects = () => {
                     {item.name}
                   </p>
                 </dt>
-                <dd className="mt-2 ml-16 text-base  dark:text-gray-500">
+                <dd className="mt-2 ml-16 text-base font-semibold dark:text-gray-500">
                   {item.description}
                 </dd>
               </div>
@@ -147,7 +145,7 @@ const Projects = () => {
               </motion.div>
               <div className="flex flex-col px-6 py-4">
                 <div className="flex justify-between">
-                  <h2 className="text-3xl font-medium text-black dark:text-white">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">
                     Your Backcountry Fix
                   </h2>
                   {/* links */}
@@ -290,7 +288,7 @@ const Projects = () => {
                   </motion.a>
                 </div>
                 {/* Description */}
-                <div className="py-4 dark:text-gray-500">
+                <div className="py-4 dark:text-gray-500 font-semibold">
                   A Full Stack E-Commerce platform for buying camping and
                   outdoor gear. Built with Stripe, Hasura, NHost, and GraphQL
                   for the backend and React, Remix for the frontend. Tailwind
@@ -318,7 +316,7 @@ const Projects = () => {
                     {item.name}
                   </p>
                 </dt>
-                <dd className="mt-2 ml-16 text-base  dark:text-gray-500">
+                <dd className="mt-2 ml-16 text-base font-semibold dark:text-gray-500">
                   {item.description}
                 </dd>
               </div>
@@ -342,7 +340,7 @@ const Projects = () => {
               </motion.div>
               <div className="flex flex-col px-6 py-4">
                 <div className="flex justify-between">
-                  <h2 className="text-3xl font-medium text-black dark:text-white">
+                  <h2 className="text-3xl font-bold text-black dark:text-white">
                     Vroom
                   </h2>
                   {/* External links */}
@@ -428,7 +426,7 @@ const Projects = () => {
                   </motion.a>
                 </div>
                 {/* Description */}
-                <div className="py-4 dark:text-gray-500">
+                <div className="py-4 font-semibold dark:text-gray-500">
                   A demo site showcasing a React Native application for renting
                   cars, built with React Native, React Native Paper, and Stripe.
                   Authentication via Auth0.
@@ -438,7 +436,7 @@ const Projects = () => {
           </div>
         </div>
         {/* Wordle */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:space-x-6 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 lg:space-x-6 mb-16 mt-20">
           <dl className="mt-10 px-2 space-y-10 order-last lg:order-first">
             {wordleFeatures.map((item) => (
               <div key={item.id} className="relative">
@@ -455,7 +453,7 @@ const Projects = () => {
                     {item.name}
                   </p>
                 </dt>
-                <dd className="mt-2 ml-16 text-base  dark:text-gray-500">
+                <dd className="mt-2 ml-16 text-base font-semibold dark:text-gray-500">
                   {item.description}
                 </dd>
               </div>
@@ -479,7 +477,7 @@ const Projects = () => {
 
               <div className="flex flex-col px-6 py-4">
                 <div className="flex justify-between">
-                  <h2 className="text-3xl font-medium text-black dark:text-white">
+                  <h2 className="text-3xl font-bold text-black dark:text-white">
                     Wordle
                   </h2>
                   {/* links */}
@@ -540,7 +538,7 @@ const Projects = () => {
                   </motion.a>
                 </div>
                 {/* Description */}
-                <div className="py-4 dark:text-gray-500">
+                <div className="py-4 font-semibold dark:text-gray-500">
                   A wordle Clone built using React and Tailwind CSS. State
                   Management via Hooks.
                 </div>
