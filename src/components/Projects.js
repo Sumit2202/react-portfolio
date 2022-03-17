@@ -22,7 +22,7 @@ const backcountryFeatures = [
     id: 1,
     name: "Web Stack Explanation",
     description:
-      "React and Remix were my choice for building the frontend, It gave me an opportunity to learn about Remix, being a relatively new React Framework. For the backend I chose Serverless (Hasura) for its flexibility and ease of use.",
+      "React, and Remix was my choice for building the frontend. It allowed me to learn about Remix, a relatively new React Framework. I chose Serverless (Hasura) for its flexibility and ease of use for the backend.",
     icon: GlobeAltIcon,
   },
   {
@@ -46,21 +46,21 @@ const vroomFeatures = [
     id: 1,
     name: "Web Stack Explanation",
     description:
-      "Wanting to build a cross platform mobile app, I chose React Native coming from having past experience using React. To make it feel like native I used React Native Paper which is a material design comoponent library for React Native.",
+      "I wanted to build a cross-platform mobile app; Having been working with React for some time now, it was evident that I chose React Native. To make it feel like a native app, I used React Native Paper, a material design component library for React Native.",
     icon: GlobeAltIcon,
   },
   {
     id: 2,
     name: "Problems and Thought Process",
     description:
-      "At the time I started building this app was because of not being able to rent cars (within Canada) via other platforms like Turo (Due to thier recent age restriction for all renters). From then I researched and found many other ways to make the whole car rental process easier and more accessible. Checkout the demo site showcasing the app and few other ideas around it.",
+      "When I started building this app, it was because of not being able to rent cars (within Canada) via other platforms like Turo (Due to their recent age restriction for all renters). I researched and found many different ways to make the car rental process easier and more accessible. Check out the demo site showcasing the app and a few other ideas around it.",
     icon: FaBrain,
   },
   {
     id: 3,
     name: "Lessons Learned",
     description:
-      "With this project I got a chance to learn about mobile development and React Native. I also learned about various mobile UI components like BottomSheet, Navigational components and how to use each one of them.",
+      "With this project, I got a chance to learn about mobile development and React Native. I also learned about various mobile UI components like BottomSheet, Navigational elements and how to use each one of them.",
     icon: SiFuturelearn,
   },
 ];
@@ -118,11 +118,11 @@ const Projects = () => {
                   >
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                   </motion.div>
-                  <p className="ml-16 text-xl leading-6 font-bold ">
+                  <p className="ml-16 text-xl text-gray-800 dark:text-white leading-6 font-bold ">
                     {item.name}
                   </p>
                 </dt>
-                <dd className="mt-2 ml-16 text-base font-semibold dark:text-gray-500">
+                <dd className="mt-2 ml-16 text-base font-semibold text-gray-500 dark:text-gray-500">
                   {item.description}
                 </dd>
               </div>
@@ -288,7 +288,7 @@ const Projects = () => {
                   </motion.a>
                 </div>
                 {/* Description */}
-                <div className="py-4 dark:text-gray-500 font-semibold">
+                <div className="py-4 dark:text-gray-500 text-gray-800 font-semibold">
                   A Full Stack E-Commerce platform for buying camping and
                   outdoor gear. Built with Stripe, Hasura, NHost, and GraphQL
                   for the backend and React, Remix for the frontend. Tailwind
@@ -312,11 +312,11 @@ const Projects = () => {
                   >
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                   </motion.div>
-                  <p className="ml-16 text-xl leading-6 font-bold ">
+                  <p className="ml-16 text-gray-800 text-xl dark:text-white leading-6 font-bold ">
                     {item.name}
                   </p>
                 </dt>
-                <dd className="mt-2 ml-16 text-base font-semibold dark:text-gray-500">
+                <dd className="mt-2 ml-16 text-base font-semibold text-gray-500 dark:text-gray-500">
                   {item.description}
                 </dd>
               </div>
@@ -426,7 +426,7 @@ const Projects = () => {
                   </motion.a>
                 </div>
                 {/* Description */}
-                <div className="py-4 font-semibold dark:text-gray-500">
+                <div className="py-4 font-semibold text-gray-800  dark:text-gray-500">
                   A demo site showcasing a React Native application for renting
                   cars, built with React Native, React Native Paper, and Stripe.
                   Authentication via Auth0.
@@ -449,11 +449,11 @@ const Projects = () => {
                   >
                     <item.icon className="h-6 w-6" aria-hidden="true" />
                   </motion.div>
-                  <p className="ml-16 text-xl leading-6 font-bold ">
+                  <p className="ml-16 text-gray-800 dark:text-white text-xl leading-6 font-bold ">
                     {item.name}
                   </p>
                 </dt>
-                <dd className="mt-2 ml-16 text-base font-semibold dark:text-gray-500">
+                <dd className="mt-2 ml-16 text-base font-semibold text-gray-500 dark:text-gray-500">
                   {item.description}
                 </dd>
               </div>
@@ -538,7 +538,7 @@ const Projects = () => {
                   </motion.a>
                 </div>
                 {/* Description */}
-                <div className="py-4 font-semibold dark:text-gray-500">
+                <div className="py-4 font-semibold text-gray-800  dark:text-gray-500">
                   A wordle Clone built using React and Tailwind CSS. State
                   Management via Hooks.
                 </div>

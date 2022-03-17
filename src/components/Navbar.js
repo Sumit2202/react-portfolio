@@ -1,7 +1,7 @@
 import React from "react";
 import DarkModeToggle from "./DarkModeToggle";
 import { MobileMenu } from "./MobileMenu";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
 const initialNavigation = [
@@ -10,10 +10,6 @@ const initialNavigation = [
   { name: "About" },
 ];
 
-const scrollToTop = () => {
-  scroll.scrollToTop();
-};
-
 const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <motion.div
@@ -21,7 +17,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
       initial={{ y: -1000, opacity: 0 }}
       animate={{ y: -10, opacity: 1 }}
       transition={{ delay: 0.3, duration: 1, type: "spring" }}
-      className={`sticky top-0 border-b border-gray-200 bg-gray-300 dark:bg-black ${
+      className={`sticky top-0 border-b border-gray-200 dark:border-black bg-white dark:bg-gray-900 ${
         darkMode ? "dark" : ""
       }`}
     >
@@ -32,6 +28,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             <div className="hidden sm:flex sm:space-x-2">
               {initialNavigation.map((item, index) => (
                 <motion.button
+                  className="h-12"
                   key={index}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.8 }}
@@ -44,9 +41,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                     offset={-100}
                     duration={250}
                     className={
-                      "cursor-pointer text-gray-500 dark:text-gray-400 px-5 p-3 inline-flex items-center rounded-md md:text-xl text-md font-medium hover:bg-gray-200 hover:text-gray-500 dark:hover:text-white dark:hover:bg-gray-700"
+                      "text-center h-12 text-sm cursor-pointer text-gray-500 dark:text-white px-5 py-auto inline-flex items-center rounded-md md:text-lg text-md font-medium hover:bg-gray-200 hover:text-gray-800 dark:hover:text-white dark:hover:bg-gray-700"
                     }
-                    activeClass="dark:!text-white !text-black"
+                    activeClass="dark:!text-white !text-black dark:bg-black bg-gray-100"
                     aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}

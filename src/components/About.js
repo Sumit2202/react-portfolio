@@ -4,8 +4,8 @@ import RevealOnScrollHOC from "./RevealOnScrollHOC";
 const AboutSection = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 lg:space-x-6 mt-10 mb-10">
-      <div className="text-black dark:text-white text-lg ">
-        <h1 className="flex gap-2 font-bold mb-4 text-4xl">
+      <div className="text-gray-500 dark:text-white text-md font-bold">
+        <h1 className="text-gray-800 dark:text-white flex gap-2 font-bold mb-4 text-4xl">
           <motion.div
             whileHover={{
               scale: [1, 3, 3, 1, 1],
@@ -22,17 +22,17 @@ const AboutSection = () => {
           RxJs(Observables).
         </span>
         <span className="block mb-5 font-semibold">
-          Currently I am diving into the Functional paradigm of programming, I
+          Currently, I am diving into the Functional paradigm of programming, I
           have been using JavaScript and dabbling around with pure functions,
           monads and shifting to a much more declarative style of functional and
           reactive programming.
         </span>
         <span className="block mb-5 font-semibold">
           I am a strong advocate of functional programming and believe in making
-          functions a first class citizens!
+          functions first-class citizens!
         </span>
         <span className="block mb-5 font-semibold">
-          I also love sports, biking and I am an outdoor enthusiast.
+          I also love sports biking, and I am an outdoor enthusiast.
         </span>
       </div>
       <motion.div
