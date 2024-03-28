@@ -133,7 +133,7 @@ const Projects = () => {
                 <img
                   className="relative mx-auto rounded-xl border-gray-500 border-2 h-84"
                   width={490}
-                  src="./movieBrowser.png"
+                  src="./moviebrowser.png"
                   alt=""
                 />
               </motion.div>
