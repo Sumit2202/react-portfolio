@@ -57,7 +57,7 @@ const Dashboard = () => {
         >
           Software Engineer.{" "}
           <span className="text-gray-700 dark:text-indigo-500 text-2xl text-center sm:text-3xl font-medium sm:font-bold pt-10 ">
-            A Full Stack Developer with an interest in Functional Programming.
+            A Mobile Engineer with an interest in Functional Programming.
           </span>
         </motion.div>
         <motion.div

@@ -4,7 +4,7 @@ import "./App.css";
 import { useState } from "react";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false); ////bg-gradient-to-r from-pink-400 via-blue-600  to-cyan-500
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <div className={`App ${darkMode ? "dark" : ""} `}>

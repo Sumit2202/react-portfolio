@@ -17,22 +17,19 @@ const AboutSection = () => {
           About Me
         </h1>
         <span className="block mb-5 font-semibold ">
-          My primary expertise lies in JavaScript - ES6+, React, TypeScript,
-          Node.js, GraphQL, Postgres, Neo4j(Graph DB), SQL Server,
-          RxJs(Observables).
+        I am a Polyglot Software Engineer with 4+ years experience, building for SaaS and Enterprise solutions.
+        </span>
+        <span className="block mb-5 font-semibold ">
+        Building cross-platform mobile apps right now - Android & iOS using React Native.
         </span>
         <span className="block mb-5 font-semibold">
-          Currently, I am diving into the Functional paradigm of programming, I
-          have been using JavaScript and dabbling around with pure functions,
-          monads and shifting to a much more declarative style of functional and
-          reactive programming.
+        I'm a constant learner and love to build side projects using cutting-edge toolsets adapting to the ever-changing landscape.
         </span>
         <span className="block mb-5 font-semibold">
-          I am a strong advocate of functional programming and believe in making
-          functions first-class citizens!
+        I love functional programming and strongly typed languages; with referential transparency, and immutability, its become possible to build very declarative, composable - (functions being the first citizens!), highly concurrent, and easier to reason about applications.
         </span>
         <span className="block mb-5 font-semibold">
-          I also love sports biking, and I am an outdoor enthusiast.
+        Want to chat? Let's connect!
         </span>
       </div>
       <motion.div

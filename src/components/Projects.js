@@ -2,41 +2,35 @@ import { GlobeAltIcon } from "@heroicons/react/outline";
 import { motion } from "framer-motion";
 import {
   FaReact,
-  FaCode,
   FaGithub,
   FaExternalLinkAlt,
   FaBrain,
-  FaStripe,
 } from "react-icons/fa";
 import {
   SiTailwindcss,
   SiFuturelearn,
-  SiGraphql,
-  SiHasura,
-  SiServerless,
-  SiAuth0,
 } from "react-icons/si";
 
 const backcountryFeatures = [
   {
     id: 1,
-    name: "Web Stack Explanation",
+    name: "Stack Explanation",
     description:
-      "React, and Remix was my choice for building the frontend. It allowed me to learn about Remix, a relatively new React Framework. I chose Serverless (Hasura) for its flexibility and ease of use for the backend.",
+      "In recent years, there have been many innovations in building a cross-platform mobile app. Kotlin Multiplatform is another example built by JetBrains, and I wanted to take a stab at it and learn some Kotlin, too, on the way. I built this app to explore this area. It is incredible how KMM can share business logic code between iOS and Android (with Kotlin Native running on iOS) while building UIs using platform-specific libraries like SwiftUI and Jetpack Compose.",
     icon: GlobeAltIcon,
   },
   {
     id: 2,
     name: "Problems and Thought Process",
     description:
-      "I built this because in the past, I had faced difficulties finding a website which sells camping supplies and outdoor gear.",
+      "There's a bit of a learning curve coming from a JS background, but I believe to be a good mobile developer, everyone should get their hands dirty with native Android/iOS development to truly understand how something works and why it is not working as expected.",
     icon: FaBrain,
   },
   {
     id: 3,
     name: "Lessons Learned",
     description:
-      "I got a chance to learn about the backend and serverless architecture. It also enabled me in understanding all the pieces of the stack and how they work together.",
+      "Along the way, I learnt a lot about native mobile development, how view models manage state, how Kotlin flows and suspend functions manage concurrency, and how MVVM architecture works.",
     icon: SiFuturelearn,
   },
 ];
@@ -44,23 +38,23 @@ const backcountryFeatures = [
 const vroomFeatures = [
   {
     id: 1,
-    name: "Web Stack Explanation",
+    name: "Stack Explanation",
     description:
-      "I wanted to build a cross-platform mobile app; Having been working with React for some time now, it was evident that I chose React Native. To make it feel like a native app, I used React Native Paper, a material design component library for React Native.",
+    "Todo-real-time is a real-time and offline-first to-do mobile app for Android and iOS built using react-native and Firebase. It syncs data in real time across multiple devices, so you can 'jump' between devices without worrying about syncing.",
     icon: GlobeAltIcon,
   },
   {
     id: 2,
     name: "Problems and Thought Process",
     description:
-      "When I started building this app, it was because of not being able to rent cars (within Canada) via other platforms like Turo (Due to their recent age restriction for all renters). I researched and found many different ways to make the car rental process easier and more accessible. Check out the demo site showcasing the app and a few other ideas around it.",
+    "I built this to learn more about Firestore and its underlying database, Spanner. Google's Firestore is a NoSQL serverless database with real-time notification capability. I was intrigued to know how FireStore is highly consistent and available simultaneously, breaking the chains of the CAP theorem. (Note: Spanner is technically a CP system, but with more than five 9s of availability, I think it well deserves the title of being Highly consistent and Highly available)",
     icon: FaBrain,
   },
   {
     id: 3,
     name: "Lessons Learned",
     description:
-      "With this project, I got a chance to learn about mobile development and React Native. I also learned about various mobile UI components like BottomSheet, Navigational elements and how to use each one of them.",
+      "Firebase rocks!! From Authentication to a complete NoSQL DB synced to the user's device, Firebase does it all.",
     icon: SiFuturelearn,
   },
 ];
@@ -68,7 +62,7 @@ const vroomFeatures = [
 const wordleFeatures = [
   {
     id: 1,
-    name: "Web Stack Explanation",
+    name: "Stack Explanation",
     description:
       "I built this Game using React and TailwindCSS, I had a lot of fun builing this game.",
     icon: GlobeAltIcon,
@@ -104,7 +98,7 @@ const Projects = () => {
           </motion.div>
           Projects
         </h2>
-        {/* Your Backcountry Fix */}
+        {/* Kotlin kmm movie browser */}
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:space-x-6 mb-16">
           <dl className="mt-10 px-2 space-y-10 order-last lg:order-first">
             {backcountryFeatures.map((item) => (
@@ -137,16 +131,16 @@ const Projects = () => {
                 }}
               >
                 <img
-                  className="relative mx-auto rounded-xl border-gray-500 border-2 h-64"
+                  className="relative mx-auto rounded-xl border-gray-500 border-2 h-84"
                   width={490}
-                  src="./backcountryFix.png"
+                  src="./movieBrowser.png"
                   alt=""
                 />
               </motion.div>
               <div className="flex flex-col px-6 py-4">
                 <div className="flex justify-between">
                   <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white">
-                    Your Backcountry Fix
+                    Kotlin Multiplatform Movie Browser
                   </h2>
                   {/* links */}
                   <div className="flex gap-6">
@@ -157,21 +151,11 @@ const Projects = () => {
                       }}
                       whileTap={{ scale: 0.8 }}
                       alt="github"
-                      href="https://github.com/CodeBrewerz/your-backcountry-fix"
+                      href="https://github.com/Sumit2202/kotlinMultiplatform-movie-browser"
                     >
                       <FaGithub aria-label="github" size={28} />
                     </motion.a>
-                    <motion.a
-                      whileHover={{
-                        scale: 1.2,
-                        textShadow: "0px 0px 10px rgba(255, 255, 255)",
-                      }}
-                      whileTap={{ scale: 0.8 }}
-                      alt="external link"
-                      href="https://your-backcountry-fix.fly.dev"
-                    >
-                      <FaExternalLinkAlt aria-label="project link" size={28} />
-                    </motion.a>
+                    
                   </div>
                 </div>
                 {/* Tags */}
@@ -182,42 +166,16 @@ const Projects = () => {
                       textShadow: "0px 0px 10px rgba(255, 255, 255)",
                     }}
                     whileTap={{ scale: 0.8 }}
-                    href="https://reactjs.org/"
-                    className="h-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-sky-900 text-cyan-400 rounded-full"
-                  >
-                    <FaReact className="mr-1" aria-label="React" size={20} />
-                    React
-                  </motion.a>
-                  <motion.a
-                    whileHover={{
-                      scale: 1.2,
-                      textShadow: "0px 0px 10px rgba(255, 255, 255)",
-                    }}
-                    whileTap={{ scale: 0.8 }}
-                    href="https://remix.run/"
-                  >
-                    <img
-                      className="h-8 mr-1 rounded-full"
-                      width={75}
-                      src="https://remix.run/img/og.1.jpg"
-                      alt=""
-                    />
-                  </motion.a>
-                  <motion.a
-                    whileHover={{
-                      scale: 1.2,
-                      textShadow: "0px 0px 10px rgba(255, 255, 255)",
-                    }}
-                    whileTap={{ scale: 0.8 }}
-                    href="https://tailwindcss.com/"
+                    href="https://kotlinlang.org/docs/multiplatform.html"
                     className=" text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-gray-800 text-cyan-300 rounded-full"
                   >
-                    <SiTailwindcss
-                      className="mr-1"
-                      aria-label="React"
-                      size={20}
+                    <img
+                      className="h-8 rounded-full"
+                      width={45}
+                      src="https://www.staffworx.co.uk/wp-content/uploads/2020/12/kotlin-logo-3.jpg"
+                      alt=""
                     />
-                    Tailwind
+                    Kotlin Multiplatform
                   </motion.a>
                   <motion.a
                     whileHover={{
@@ -225,15 +183,16 @@ const Projects = () => {
                       textShadow: "0px 0px 10px rgba(255, 255, 255)",
                     }}
                     whileTap={{ scale: 0.8 }}
-                    href="https://graphql.org/"
-                    className="h-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-2 py-1 bg-pink-100 text-pink-600 rounded-full"
+                    href="https://developer.android.com/develop/ui/compose"
+                    className=" text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-gray-800 text-cyan-300 rounded-full"
                   >
-                    <SiGraphql
-                      className="mr-1"
-                      aria-label="graphQL"
-                      size={20}
+                    <img
+                      className="h-8 w-10 mr-1 rounded-full"
+                      width={75}
+                      src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjC97Z8BResg5dlPqczsRCFhP6zewWX0X0e7fVPG-G7PuUZwwZVsi9OPoqJYkgqT2h0FI95SsmWzVEgpt8b8HAqFiIxZ98TFtY4lE0b8UrtVJ2HrJebRwl6C9DslsQDl9KnBIrdHS6LtkY/s1600/jetpack+compose+icon_RGB.png"
+                      alt=""
                     />
-                    GraphQL
+                    Jetpack Compose
                   </motion.a>
                   <motion.a
                     whileHover={{
@@ -241,39 +200,16 @@ const Projects = () => {
                       textShadow: "0px 0px 10px rgba(255, 255, 255)",
                     }}
                     whileTap={{ scale: 0.8 }}
-                    href="https://hasura.io/"
-                    className="h-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-2 py-1 bg-cyan-100 text-cyan-600 rounded-full"
+                    href="https://ktor.io/docs/getting-started-ktor-client-multiplatform-mobile.html"
+                    className=" text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-gray-800 text-cyan-300 rounded-full"
                   >
-                    <SiHasura className="mr-1" aria-label="hasura" size={20} />
-                    Hasura
-                  </motion.a>
-                  <motion.a
-                    whileHover={{
-                      scale: 1.2,
-                      textShadow: "0px 0px 10px rgba(255, 255, 255)",
-                    }}
-                    whileTap={{ scale: 0.8 }}
-                    href="https://github.com/expressjs/express"
-                    className="h-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-2 py-1 bg-green-400 rounded-full"
-                  >
-                    <FaCode className="mr-1" aria-label="NodeJS" size={20} />
-                    Node Express Server
-                  </motion.a>
-                  <motion.a
-                    whileHover={{
-                      scale: 1.2,
-                      textShadow: "0px 0px 10px rgba(255, 255, 255)",
-                    }}
-                    whileTap={{ scale: 0.8 }}
-                    href="https://nhost.io/"
-                    className="h-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-2 py-1 bg-blue-700 text-black rounded-full"
-                  >
-                    <SiServerless
-                      className="mr-1"
-                      aria-label="NHost"
-                      size={20}
+                    <img
+                      className="h-8 w-10 mr-1 rounded-full"
+                      width={75}
+                      src="https://pbs.twimg.com/profile_images/1305803851832975360/CAZ9uIaH_400x400.jpg"
+                      alt=""
                     />
-                    NHost
+                    Ktor
                   </motion.a>
                   <motion.a
                     whileHover={{
@@ -281,24 +217,45 @@ const Projects = () => {
                       textShadow: "0px 0px 10px rgba(255, 255, 255)",
                     }}
                     whileTap={{ scale: 0.8 }}
-                    href="https://stripe.com/en-ca"
-                    className="h-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-2 py-1 bg-sky-600 rounded-full"
+                    href="https://arkivanov.github.io/Decompose/"
+                    className="h-10 text-xs inline-flex items-center font-bold leading-sm uppercase px-2 py-1 bg-pink-100 text-pink-600 rounded-full"
                   >
-                    <FaStripe className="mr-1" aria-label="Stripe" size={55} />
+                    <img
+                      className="h-8 w-10 mr-1 rounded-full"
+                      width={75}
+                      src="https://arkivanov.github.io/Decompose/media/logo/circle-2.png"
+                      alt=""
+                    />
+                    Decompose
                   </motion.a>
+                  <motion.a
+                    whileHover={{
+                      scale: 1.2,
+                      textShadow: "0px 0px 10px rgba(255, 255, 255)",
+                    }}
+                    whileTap={{ scale: 0.8 }}
+                    href="https://kotlinlang.org/docs/coroutines-overview.html"
+                    className="h-10 text-xs inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-gray-800 text-cyan-300 rounded-full"
+                  >
+                    <img
+                      className="h-8 rounded-full"
+                      width={45}
+                      src="https://www.staffworx.co.uk/wp-content/uploads/2020/12/kotlin-logo-3.jpg"
+                      alt=""
+                    />
+                    Kotlin Coroutines
+                  </motion.a>
+                  
                 </div>
                 {/* Description */}
                 <div className="py-4 dark:text-gray-500 text-gray-800 font-semibold">
-                  A Full Stack E-Commerce platform for buying camping and
-                  outdoor gear. Built with Stripe, Hasura, NHost, and GraphQL
-                  for the backend and React, Remix for the frontend. Tailwind
-                  css for styling and reponsive layout.
+                  A cross platform mobile app for browsing movies, built with KMM, Kotlin, Ktor and decompose.
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* Vroom Product Site */}
+        {/* Offline-Sync Real time Todo  */}
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:space-x-6 mb-16">
           <dl className="mt-5 px-2 space-y-10 order-last">
             {vroomFeatures.map((item) => (
@@ -331,19 +288,20 @@ const Projects = () => {
                 }}
               >
                 <img
-                  className="relative mx-auto rounded-xl border-gray-500 border-2 h-64"
+                  className="relative mx-auto rounded-xl border-gray-500 border-2 h-84"
                   width={490}
                   height={50}
-                  src="./vroom.png"
+                  src="./TodosRealtime.png"
                   alt=""
                 />
               </motion.div>
               <div className="flex flex-col px-6 py-4">
                 <div className="flex justify-between">
                   <h2 className="text-3xl font-bold text-black dark:text-white">
-                    Vroom
+                    Todo Real Time
                   </h2>
                   {/* External links */}
+                  {/* Reactive, Realtime, Local-First */}
                   <div className="flex gap-6 ">
                     <motion.a
                       whileHover={{
@@ -352,21 +310,11 @@ const Projects = () => {
                       }}
                       whileTap={{ scale: 0.8 }}
                       alt="github"
-                      href="https://github.com/CodeBrewerz/vroom-product-site"
+                      href="https://github.com/Sumit2202/todo-real-time"
                     >
                       <FaGithub aria-label="github" size={28} />
                     </motion.a>
-                    <motion.a
-                      whileHover={{
-                        scale: 1.2,
-                        textShadow: "0px 0px 10px rgba(255, 255, 255)",
-                      }}
-                      whileTap={{ scale: 0.8 }}
-                      alt="project link"
-                      href="https://vroom-product-site.vercel.app/"
-                    >
-                      <FaExternalLinkAlt aria-label="project link" size={28} />
-                    </motion.a>
+                    
                   </div>
                 </div>
                 {/* Tags */}
@@ -389,6 +337,24 @@ const Projects = () => {
                       textShadow: "0px 0px 10px rgba(255, 255, 255)",
                     }}
                     whileTap={{ scale: 0.8 }}
+                    href="https://expo.dev/"
+                    className="text-xs text-center inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-400 rounded-full"
+                  >
+                    <img
+                      className="mr-1 rounded-full"
+                      width={30}
+                      height={35}
+                      src="https://miro.medium.com/v2/resize:fit:1200/1*M4W1zKMuf0xmAcZwZgUcTQ.png"
+                      alt=""
+                    />
+                    Expo
+                  </motion.a>
+                  <motion.a
+                    whileHover={{
+                      scale: 1.2,
+                      textShadow: "0px 0px 10px rgba(255, 255, 255)",
+                    }}
+                    whileTap={{ scale: 0.8 }}
                     href="https://reactnativepaper.com/"
                     className="text-xs text-center inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-indigo-300 text-indigo-700 rounded-full"
                   >
@@ -402,15 +368,22 @@ const Projects = () => {
                     React Native Paper
                   </motion.a>
                   <motion.a
-                    href="https://stripe.com/en-ca"
                     whileHover={{
                       scale: 1.2,
                       textShadow: "0px 0px 10px rgba(255, 255, 255)",
                     }}
                     whileTap={{ scale: 0.8 }}
-                    className="h-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-2 py-1 bg-sky-600 rounded-full"
+                    href="https://firebase.google.com/docs/firestore"
+                    className="text-xs text-center inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-yellow-400 rounded-full"
                   >
-                    <FaStripe className="mr-1" aria-label="Stripe" size={55} />
+                    <img
+                      className="mr-1 rounded-full"
+                      width={25}
+                      height={30}
+                      src="https://firebase.google.com/static/images/brand-guidelines/logo-vertical.png"
+                      alt=""
+                    />
+                    Firebase Firestore
                   </motion.a>
                   <motion.a
                     whileHover={{
@@ -418,18 +391,23 @@ const Projects = () => {
                       textShadow: "0px 0px 10px rgba(255, 255, 255)",
                     }}
                     whileTap={{ scale: 0.8 }}
-                    href="https://auth0.com/"
-                    className="h-8 text-xs inline-flex items-center font-bold leading-sm uppercase px-2 py-1 bg-orange-500 rounded-full"
+                    href="https://firebase.google.com/docs/auth"
+                    className="text-xs text-center inline-flex items-center font-bold leading-sm uppercase px-3 py-1 bg-yellow-400 rounded-full"
                   >
-                    <SiAuth0 className="mr-1" aria-label="Auth0" size={20} />{" "}
-                    Auth0
+                    <img
+                      className="mr-1 rounded-full"
+                      width={25}
+                      height={30}
+                      src="https://firebase.google.com/static/images/brand-guidelines/logo-vertical.png"
+                      alt=""
+                    />
+                    Firebase Auth
                   </motion.a>
                 </div>
                 {/* Description */}
                 <div className="py-4 font-semibold text-gray-800  dark:text-gray-500">
-                  A demo site showcasing a React Native application for renting
-                  cars, built with React Native, React Native Paper, and Stripe.
-                  Authentication via Auth0.
+                  A screenshot showcasing a React Native app for keeping a list of Todos,
+                  accross devices, built with React Native,Expo, React Native Paper, and Firebase.
                 </div>
               </div>
             </div>
